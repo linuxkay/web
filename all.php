@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . '/vendor/autoload.php';
+$filePath = 'cache/result.json';
 $cli = new Goutte\Client();
 $urleboshi = 'http://www.eboshi.co.jp/';
 $urlstmary = 'http://stmary-338.com/';
@@ -19,19 +20,25 @@ $crawleronikobe = $cli->request('GET', $urlonikobe);
 
 //Eboshi
 $eboshi    = $crawlereboshi->filterXPath('//*[@id="top"]/div[2]/div/div[2]/div/div[2]/p[3]/span')->text();
-echo($eboshi);
+print" eboshi "; echo($eboshi);
+file_put_contents($filePath,$eboshi);
 //stmary
 $stmary    = $crawlerstmary->filterXPath('//*[@id="panel-w5840cbe2b571d-0-1-0"]/div/div/fieldset[1]')->text();
-echo($stmary);
+print" stmary ";echo($stmary);
+file_put_contents($filePath,$stmary,  FILE_APPEND | LOCK_EX);
 //yamagatazao
-$yamagatazao    = $crawleryamagatazao->filterXPath('//*[@id="page"]/div[4]/div[1]/div/section/div[2]/article/div/div[1]/div[3]/div/div[2]/table/tbody/td[2]')->text();
-echo($yamagatazao);
+$yamagatazao    = $crawleryamagatazao->filterXPath('//*[@id="page"]/div[4]/div[1]/div/section/div[2]/article/div/div[1]/div[3]/div/div[2]/table/tbody/tr[1]/td[2]')->text();
+print" yamagata zao ";echo($yamagatazao);
+file_put_contents($filePath,$yamagatazao,  FILE_APPEND | LOCK_EX);
 //springvalley
 $springvalley    = $crawlerspringvalley->filter('table')->eq(1)->filter('tr')->filter('td')->text();
-echo($springvalley);
+print" springvalley ";echo($springvalley);
+file_put_contents($filePath,$springvalley,  FILE_APPEND | LOCK_EX);
 //jungle
 $jungle    = $crawlerjungle->filterXPath('//*[@id="condition2"]/table[1]/tbody/tr[3]/td[3]')->text();
-echo($jungle);
+print" jungle x2 ";echo($jungle);
+file_put_contents($filePath,$jungle,  FILE_APPEND | LOCK_EX);
 //onikobe
 $onikobe    = $crawleronikobe->filterXPath('//*[@id="lift-01"]/td[2]')->text();
-echo($onikobe);
+print" onikobe ";echo($onikobe);
+file_put_contents($filePath,$onikobe,  FILE_APPEND | LOCK_EX);
