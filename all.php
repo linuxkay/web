@@ -1,3 +1,6 @@
+<?php
+
+require_once __DIR__ . '/vendor/autoload.php';
 $cli = new Goutte\Client();
 $urleboshi = 'http://www.eboshi.co.jp/';
 $urlstmary = 'http://stmary-338.com/';
