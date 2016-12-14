@@ -9,5 +9,6 @@ $crawler = $cli->request('GET', $url);
 
 //XPath
 $title    = $crawler->filterXPath('//*[@id="top"]/div[2]/div/div[2]/div/div[2]/p[3]/span')->text();
-var_dump($title);
+//var_dump($title);
+echo($title);
 
