@@ -1,0 +1,2 @@
+$arr = array('result' => [array('name' => 'Eboshi','openclose' => $eboshi),array('name' => 'St-Mary','openclose' => $stmary),array('name' => 'Yamagata-Zao','openclose' => $yamagatazao),array('name' => 'SpringValley','openclose' => $springvalley),array('name' => 'Jungle Jungle','openclose' => $jungle),array('name' => 'Onikobe','openclose' => $onikobe)]);
+echo json_encode($arr,JSON_UNESCAPED_UNICODE);
