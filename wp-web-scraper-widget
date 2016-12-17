@@ -1,0 +1,16 @@
+宮城県川崎町
+<br>
+[wpws url="http://weathernews.jp/onebox/38.18/140.64/temp=c" query="#content_main %3e div:nth-child(3) %3e div.flex_radar.mb %3e div.obs_text %3e div %3e span" querydecode="1" ]
+
+<br>
+
+
+気温
+[wpws url="http://weathernews.jp/onebox/38.18/140.64/temp=c" query="td.obs_temp %3e span.obs_temp_main" querydecode="1" ]
+
+<br>
+
+[wpws url="http://weathernews.jp/onebox/38.18/140.64/temp=c" query="tr:nth-child(3) %3e td.obs_sub_title, tr:nth-child(3) %3e td.obs_sub_value" querydecode="1" ]
+
+<br>
+<a href="http://weathernews.jp/onebox/38.18/140.64/temp=c" target="_blank">weathernews</a>
