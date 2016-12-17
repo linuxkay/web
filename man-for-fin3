@@ -1,0 +1,5 @@
+added 18th Dec 2016
+fin3.php
+requires goutte's vendor dir
+check user and group by ls -lh
+if not, then do chown recursively.
