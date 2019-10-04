@@ -1,0 +1,64 @@
+html {
+	height: 100%;
+	margin: 0 auto; padding: 0;
+	display: table;
+}
+.title{
+    font-family: "Nico Moji"; 
+}
+table, td, th {
+  border-radius: 22px;
+}
+.head1{
+    font-family: "Nico Moji"; 
+    text-align: center;
+    font-size: 2em;
+    font-color: white;
+    padding: 10px;
+/*    background-color: rgba(250, 250, 250, 0.6);*/
+}
+.head2{
+    text-align: center;
+    font-size: 1.5em;
+    padding: 10px;
+}
+.post-title{
+}
+body {
+	min-height: 100%;
+	margin: 0 auto; padding: 0;
+	display: table-cell;
+	vertical-align: middle;
+  	background: url("image/snowybirdhouse1024x576.jpg") center center / cover no-repeat fixed;
+}
+.marquee {
+width:620px;
+padding:0.5em 0;
+background-color: rgba(250, 250, 250, 0.6);
+
+}
+.weather {
+	 color: black; 
+}
+.main-table {
+	 border-style: none;
+}
+.weather-table {
+	 border-style: none;
+	 background-color: rgba(250, 250, 250, 0.55);
+}
+/*@media only screen and (max-width: 767px) {
+  body {
+    background-image: url("image/snowybirdhouse.jpg");
+  }
+}
+*/
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+       only screen and (   min--moz-device-pixel-ratio: 2),
+       only screen and (     -o-min-device-pixel-ratio: 2/1),
+       only screen and (        min-device-pixel-ratio: 2),
+       only screen and (                min-resolution: 192dpi),
+       only screen and (                min-resolution: 2dppx) {
+    background-image: url("image/snowybirdhouse1024x576.jpg");
+    background-size: 320px 320px;
+}

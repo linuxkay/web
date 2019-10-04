@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang=”ja”>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js?ver=4.7'></script>
+<script type='text/javascript' src='/js/ski.js'></script>
+<script type='text/javascript' src='/js/tenki.js'></script>
+<meta charset=”UTF-8″>
+<meta name="keywords" content="スキー場リフト運行早見表 せっかくスキー場に来たのに風が強くてリフト運休。他にどこのスキー場に行こうかって時に宮城県と山形県のスキー場リフト運行早見表。">
+<meta name="description" content="スキー場リフト運行早見表 せっかくスキー場に来たのに風が強くてリフト運休。他にどこのスキー場に行こうかって時に宮城県と山形県のスキー場リフト運行早見表。">
+<title>スキー場リフト運行早見表</title>
+<!--
+<style>
+*{margin:0;padding:0;}
+body{
+padding:20px;
+font-size:100.01%;
+}
+table.tbl{
+width:600px;
+margin:0 auto;
+border-collapse:collapse;
+}
+
+table.tbl th,
+table.tbl td{
+padding:10px;
+font-size:0.8em;
+font-weight:normal;
+vertical-align:top;
+border:1px solid #ccc;
+line-height:1.6;
+}
+
+table.tbl td span{
+display:inline-block;
+padding:2px 10px;
+font-size:0.78em;
+}
+
+table.tbl td span.company{background:#0066cc;color:#fff;}
+table.tbl td span.products{background:#0dd000;color:#fff;}
+</style>
+--!>
+</head>
+<body>
+<h1>スキー場リフト運行早見表</h1>
+<!--
+<table cellpadding="0" cellspacing="0" border="0" class="tbl">  
+<col width="15%" />  
+<col width="15%" />  
+<col width="70%" />  
+<tbody>  
+<tr>  
+<th></th>  
+<td></td>  
+</tr>  
+</tbody>  
+</table>
+snip 
+<script>
+    function reqListener () {
+      console.log(this.responseText);
+    }
+
+    var oReq = new XMLHttpRequest(); //New request object
+    oReq.onload = function() {
+        //This is where you handle what to do with the response.
+        //The actual data is found on this.responseText
+        alert(this.responseText); //Will alert: 42
+    };
+    oReq.open("get", "fin3.php", true);
+    //                               ^ Don't block the rest of the execution.
+    //                                 Don't wait until the request finishes to 
+    //                                 continue.
+    oReq.send();
+</script>
+snip -->
+<p><center><strong>9時,12時,15時,18時 自動更新</strong></center></p>
+</p>
+<div id="test1">
+<!--<table border="5">
+<caption>SkiResortsstatus</caption>--!>
+<table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
+<tr>
+<th bgcolor="#0098ff"><font color="#FFFFFF">えぼしスキー場</font></th>
+<th bgcolor="#0098ff" width="300"><font color="#FFFFFF">セントメリースキー場</font></th>
+<th bgcolor="0098ff" width="300"><font color="#FFFFFF">山形蔵王温泉スキー場</font></th>
+</tr>
+
+
+<tr>
+<th bgcolor="#FFFFFF" width="300"><font color="#FFFFFF">
+<img src="/image/1.gif">
+<br>
+<a title="eboshi-weather" class="weather" target="_self"><span class="eboshi-weather"></span></a>
+<!--<a href="http://weathernews.jp/onebox/38.13/140.53/temp=c" target="_blank">Eboshi weather</a> --!>
+</th>
+<th bgcolor="#FFFFFF" width="300"><font color="#FFFFFF">
+<img src="/image/1.gif">
+<br>
+<a title="stmary-weather" class="weather" target="_self"><span class="stmary-weather"></span></a>
+<!--<a href="http://weathernews.jp/onebox/38.21/140.52" target="_blank">Stmary weather</a> --!>
+<th bgcolor="#FFFFFF" width="300"><font color="#FFFFFF">
+<img src="/image/1.gif">
+<br>
+<a title="yamagatazao-weather" class="weather" target="_self"><span class="yamagatazao-weather"></span></a>
+<!--<a href="http://weathernews.jp/onebox/38.17/140.40/temp=c" target="_blank">山形zao weather</a> --!>
+</th>
+
+
+<tr>
+<td bgcolor="#FFFFFF" align="center" nowrap>
+<a title="eboshi-openinfo" class="post-title" target="_self"><span class="eboshi-currently"></span></a>
+</td>
+<td bgcolor="#FFFFFF" align="center" nowrap>
+<a title="stmary-openinfo" class="post-title" target="_self"> <span class="stmary-currently"> </span></a>
+</td>
+<td bgcolor="#FFFFFF" align="center" width="300">
+<a title="yamagatazao-openinfo" class="post-title" target="_self"><span class="yamagatazao-currently"></span></a>
+</td>
+
+
+
+</tr>
+<tr>
+<th bgcolor="0098ff"><font color="#FFFFFF">スプリングバレー</font></th>
+<th bgcolor="0098ff" width="300"><font color="#FFFFFF">ジャングル x2</font></th>
+<th bgcolor="0098ff" width="300"><font color="#FFFFFF">オニコウベスキー場</font></th>
+</tr>
+
+
+<tr>
+<th bgcolor="#FFFFFF" width="300"><font color="#FFFFFF">
+<img src="/image/1.gif">
+<br>
+<a title="springvalley-weather" class="weather" target="_self"><span class="springvalley-weather"></span></a>
+<!--<a href="http://weathernews.jp/onebox/38.41/140.72" target="_blank">Spring weather</a> --!>
+
+</th>
+<th bgcolor="#FFFFFF" width="300"><font color="#FFFFFF">
+<img src="/image/1.gif">
+<br>
+<a title="jungle-weather" class="weather" target="_self"><span class="jungle-weather"></span></a>
+<!--<a href="http://weathernews.jp/onebox/38.43/140.54" target="_blank">Jungle weather</a>--!>
+</th>
+<th bgcolor="#FFFFFF" width="300"><font color="#FFFFFF">
+<img src="/image/1.gif">
+<br>
+<a title="onikobe-weather" class="weather" target="_self"><span class="onikobe-weather"></span></a>
+<!-- <a href="http://weathernews.jp/onebox/38.79/140.64/temp=c" target="_blank">Onikobe weather</a> --!>
+</th>
+</tr>
+
+
+<tr>
+<td bgcolor="#FFFFFF" align="center" width="300">
+<a title="springvalley-openinfo" class="post-title" target="_self"><span class="springvalley-currently"></span></a>
+</td>
+
+<td bgcolor="#FFFFFF" align="center" width="300">
+<a title="jungle-openinfo" class="post-title" target="_self"><span class="jungle-currently"></span></a>
+
+</td>
+<td bgcolor="#FFFFFF" align="center" width="300">
+<a title="onikobe-openinfo" class="post-title" target="_self"><span class="onikobe-currently"></span></a>
+
+</td>
+</tr>
+</table>
+</div>
+<img src ="<?php echo $pweboshi1; ?>" />
+</body>
+</html>
+

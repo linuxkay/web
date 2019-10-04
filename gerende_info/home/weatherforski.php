@@ -1,0 +1,49 @@
+<?php
+
+require_once __DIR__ . '/vendor/autoload.php';
+$filePath = 'cache/tenki.json';
+$cli = new Goutte\Client();
+
+//crawl weather info 4 eboshi
+$urlweboshi = 'http://weathernews.jp/onebox/38.13/140.53';
+$crawlerweboshi = $cli->request('GET', $urlweboshi);
+$weboshi = $crawlerweboshi->filterXPath('//*[@id="content_main"]/div[3]/div[1]/div[1]/div/span')->text();
+$weboshi1 = preg_replace("/[0-9:,]+/","", $weboshi);
+echo($weboshi1);
+sleep(5);
+$urlwstmary = 'http://weathernews.jp/onebox/38.21/140.52';
+$crawlerwstmary = $cli->request('GET', $urlwstmary);
+$wstmary = $crawlerwstmary->filterXPath('//*[@id="content_main"]/div[3]/div[1]/div[1]/div/span')->text();
+$wstmary1 = preg_replace("/[0-9:,]+/","", $wstmary);
+echo($wstmary1);
+sleep(5);
+$urlwyamagatazao = 'http://weathernews.jp/onebox/38.17/140.40';
+$crawlerwyamagatazao = $cli->request('GET', $urlwyamagatazao);
+$wyamagatazao = $crawlerwyamagatazao->filterXPath('//*[@id="content_main"]/div[3]/div[1]/div[1]/div/span')->text();
+$wyamagatazao1 = preg_replace("/[0-9:,]+/","", $wyamagatazao);
+echo($wyamagatazao1);
+sleep(5);
+$urlwspringvalley = 'http://weathernews.jp/onebox/38.41/140.72';
+$crawlerwspringvalley = $cli->request('GET', $urlwspringvalley);
+$wspringvalley = $crawlerwspringvalley->filterXPath('//*[@id="content_main"]/div[3]/div[1]/div[1]/div/span')->text();
+$wspringvalley1 = preg_replace("/[0-9:,]+/","", $wspringvalley);
+echo($wspringvalley1);
+sleep(5);
+$urlwjungle = 'http://weathernews.jp/onebox/38.43/140.54/';
+$crawlerwjungle = $cli->request('GET', $urlwjungle);
+$wjungle = $crawlerwjungle->filterXPath('//*[@id="content_main"]/div[3]/div[1]/div[1]/div/span')->text();
+$wjungle1 = preg_replace("/[0-9:,]+/","", $wjungle);
+echo($wjungle1);
+sleep(5);
+
+$urlwonikobe = 'http://weathernews.jp/onebox/38.79/140.64';
+$crawlerwonikobe = $cli->request('GET', $urlwonikobe);
+$wonikobe = $crawlerwonikobe->filterXPath('//*[@id="content_main"]/div[3]/div[1]/div[1]/div/span')->text();
+$wonikobe1 = preg_replace("/[0-9:,]+/","", $wonikobe);
+echo($wonikobe1);
+
+$arr = array('result' => [array('name' => 'eboshi','weather' => $weboshi1),array('name' => 'stmary','weather' => $wstmary1),array('name' => 'yamagatazao','weather' => $wyamagatazao1),array('name' => 'springvalley','weather' => $wspringvalley1),array('name' => 'jungle','weather' => $wjungle1),array('name' => 'onikobe','weather' => $wonikobe1)]);
+echo json_encode($arr,JSON_UNESCAPED_UNICODE);
+file_put_contents($filePath,json_encode($arr,JSON_UNESCAPED_UNICODE));
+?>
+
