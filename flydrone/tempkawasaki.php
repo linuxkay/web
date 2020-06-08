@@ -5,12 +5,9 @@ $filePath = 'cache/tempkawasaki.json';
 $cli = new Goutte\Client();
 
 //crawl temp info 4 Kawasaki 
-$urlkawasaki = 'http://weathernews.jp/onebox/38.18/140.64/';
+$urlkawasaki = 'https://weathernews.jp/onebox/38.18/140.64/q=Kawasaki-machi&v=9fd8073dd2627426e2f1a56703cb8486e7d5826e83d8c1bdce4ac95e53580bb0&lang=ja&type=day';
 $crawlerkawasaki = $cli->request('GET', $urlkawasaki);
 $kawasaki = $crawlerkawasaki->filterXPath('//*[@id="main"]/section[6]/div/div/div[2]/ul/li[2]')->text();
-#$kawasaki = $crawlerkawasaki->filterXPath('//*[@id="content_main"]/div[3]/div[1]/div[1]/div/table[2]/tr[3]/td[2]')->text();
-//$kawasaki = preg_replace('[\xFF01-\xFF5E]','', $kawasaki);
-//$kawasaki = mb_ereg_replace("¡§ËÌ","", $kawasaki);
 $kawasaki = mb_substr($kawasaki, -5, 5);
 
 $place = 'kawasaki';
