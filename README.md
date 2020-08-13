@@ -2,7 +2,7 @@
 
 ## Category
 
-Websites backup
+Website backup
 
 ## Description
 
@@ -11,6 +11,8 @@ Websites backup
 ## Overview
 
 ## Requirements
+
+Linux web server
 
 ## Install
 
