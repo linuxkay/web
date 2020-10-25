@@ -22,6 +22,11 @@ Linux web server
 
 ## Updates
 
+2020/10/25
+Found out all websites down.
+
+2020/10/26 03:12 Fixed do-you-linux by renamming wpdiscuz and wordpress-seo plugins.
+
 ## Licence
 [MIT]
 
