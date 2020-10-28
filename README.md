@@ -23,7 +23,9 @@ Linux web server
 ## Updates
 
 2020/10/25
+
 Found out all websites down.
+
 Server was unable to reach in LAN.
 
 2020/10/26 03:12 Fixed do-you-linux by renamming wpdiscuz and wordpress-seo plugins. Updated wpmail-smtp by using google-cloud-platform ID and ID-secret(Used GMAIL-API)
@@ -31,6 +33,7 @@ Server was unable to reach in LAN.
 2020/10/27 Confirmed all sites working.
 
 ## Licence
+
 [MIT]
 
 ## Author
