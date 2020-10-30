@@ -18,6 +18,8 @@ Linux web server
 
 ## Usage
 
+wp-web-scraper-widget is for flydrone
+
 ## Contribution
 
 ## Updates
